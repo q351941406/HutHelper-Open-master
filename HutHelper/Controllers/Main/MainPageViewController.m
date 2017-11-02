@@ -323,9 +323,9 @@ int class_error_;
         [Config pushViewController:@"ScoreShow"];
         
     }
-} //成绩查询
+} ///图书馆
 - (IBAction)Library:(id)sender {
-    [Config pushViewController:@"Library"];
+    [MBProgressHUD showError:@"暂无图书可看"];
 } //图书馆
 - (IBAction)Exam:(id)sender {
     if ([Config isTourist]) {

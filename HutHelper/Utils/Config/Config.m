@@ -272,8 +272,8 @@ static int Is ;
 +(void)addNotice{
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     NSDictionary *noticeDictionary=@{@"time":@"2017-09-28 08:00",
-                                     @"title":@"工大助手",
-                                     @"body":@"开源版本\n\n- 欢迎您联系我wxz@wxz.name"
+                                     @"title":@"欢迎你",
+                                     @"body":@"如有问题，请填写在线反馈"
                                      };
     
     NSDictionary *noticeDictionary1=@{@"time":@"2017-08-14 08:00",

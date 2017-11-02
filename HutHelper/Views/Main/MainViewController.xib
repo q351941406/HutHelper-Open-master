@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="ico_main_banner" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-9q-YzO">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="img_notice_banner" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-9q-YzO">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="286"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -285,7 +285,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ico_main_banner" width="720" height="500"/>
         <image name="ico_main_calendar" width="98" height="98"/>
         <image name="ico_main_curriculum" width="98" height="98"/>
         <image name="ico_main_electricity" width="98" height="98"/>
@@ -300,5 +299,6 @@
         <image name="ico_main_social" width="98" height="98"/>
         <image name="ico_main_vedio" width="98" height="98"/>
         <image name="img_main_time" width="32" height="32"/>
+        <image name="img_notice_banner" width="720" height="460"/>
     </resources>
 </document>

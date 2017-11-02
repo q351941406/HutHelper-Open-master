@@ -17,6 +17,8 @@
 #import "iVersion.h"
 #import <RongIMKit/RongIMKit.h>
 #import "ChatListViewController.h"
+
+//15056315768
 @interface AppDelegate ()<RCIMUserInfoDataSource>{
     
 }
@@ -312,7 +314,7 @@
 //检查app更新
 + (void)initialize
 {
-    [iVersion sharedInstance].appStoreID = APPSTORE_ID;
+    
 }
 
 
