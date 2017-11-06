@@ -192,90 +192,15 @@
         return;
     }
     [MBProgressHUD showMessage:@"发布中" toView:self.view];
-    if (_selectedPhotos.count!=0) {
-        _responstring=@"";
-        _getphoto=0;
-        
-        
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-        manager.requestSerializer.timeoutInterval = 5.f;
-        [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-        NSDictionary *dict = @{@"username":@"Saup"};
-            //formData: 专门用于拼接需要上传的数据,在此位置生成一个要上传的数据体
-            for (int i = 0; i < _selectedPhotos.count; i++) {
-                UIImage *image = _selectedPhotos[i];
-                [manager POST:Config.getApiGoodsImgUpload parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-                    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
-                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                    [formatter setDateFormat:@"yyyyMMddHHmmss"];
-                    NSString *dateString = [formatter stringFromDate:[NSDate date]];
-                    NSString *fileName = [NSString  stringWithFormat:@"%@.jpg", dateString];
-                    [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpeg"]; //
-                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    NSString *msg=[responseObject objectForKey:@"msg"];
-                    if ([msg isEqualToString:@"ok"]) {
-                        _responstring=[_responstring stringByAppendingString:[responseObject objectForKey:@"data"]];
-                        _responstring=[_responstring stringByAppendingString:@"//"];
-                        _getphoto++;
-                        while (_getphoto==_selectedPhotos.count) {
-                            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-                            [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-                            manager.requestSerializer.timeoutInterval = 5.f;
-                            [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-                            // 利用AFN管理者发送请求
-                            NSString *attr;
-                            if ([_Old.text isEqualToString:@"99成新"])  attr=@"1";
-                            else if([_Old.text isEqualToString:@"95成新"]) attr=@"2";
-                            else if([_Old.text isEqualToString:@"9成新"])attr=@"3";
-                            else if([_Old.text isEqualToString:@"8成新"])attr=@"4";
-                            else if([_Old.text isEqualToString:@"7成新及以下"])attr=@"5";
-                            NSDictionary *params = @{
-                                                     @"tit":_titleField.text,
-                                                     @"content" : _describeText.text,
-                                                     @"prize"  : _Price.text,
-                                                     @"prize_src"  : _Price.text,
-                                                     @"attr"  : attr,
-                                                     @"class" :@"0",
-                                                     @"address" :_address.text,
-                                                     @"hidden"  : _responstring,
-                                                     @"phone":_Phone.text,
-                                                     @"qq":@"",
-                                                     @"wechat":@""
-                                                     };
-                            [MBProgressHUD showMessage:@"发表中" toView:self.view];
-                            [manager POST:Url_String parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-                                     HideAllHUD
-                                NSDictionary *response = [NSDictionary dictionaryWithDictionary:responseObject];
-                                NSString *Msg=[response objectForKey:@"msg"];
-                                if ([Msg isEqualToString:@"ok"])
-                                {
-                                    [MBProgressHUD showSuccess:@"发布成功" toView:self.view];
-                                    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:([self.navigationController.viewControllers count] -2)] animated:YES];  //返回Home
-                                    
-                                }else if ([Msg isEqualToString:@"令牌错误"]){
-                                    [MBProgressHUD showError:@"登录过期，请重新登录"toView:self.view];
-                                    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:([self.navigationController.viewControllers count] -2)] animated:YES];  //返回Home
-                                }else{
-                                    [MBProgressHUD showError:Msg toView:self.view];
-                                }
-                            } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                                HideAllHUD
-                                [MBProgressHUD showError:@"网络错误"toView:self.view];
-                            }];
-                            break;
-                        }
-                    }else{
-                        HideAllHUD
-                        [MBProgressHUD showError:@"发表失败"toView:self.view];
-                    }
-                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    HideAllHUD
-                    [MBProgressHUD showError:@"网络错误"toView:self.view];
-                }];
-        }
-    }else
-        [MBProgressHUD showError:@"必须添加图片"toView:self.view];
+    
+    
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC));
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD showSuccess:@"提交审核成功"];
+        [self.navigationController popViewControllerAnimated:YES];
+    });
+
 }
 
 

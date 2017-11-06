@@ -154,32 +154,7 @@ typedef NS_ENUM(NSUInteger, PowerSelectBtn) {
 }
 
 - (IBAction)Mark:(id)sender {
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    NSString *Build_String    = _Building.text;
-    NSString *Room_String     = _Room.text;
-    NSURL *url                = [NSURL URLWithString: [Config getApiPower:Build_String room:Room_String]];//接口地址
-    [MBProgressHUD showMessage:@"查询中" toView:self.view];
-    [APIRequest GET:[Config getApiPower:Build_String room:Room_String] parameters:nil success:^(id responseObject) {
-        NSString *power_du=[responseObject objectForKey:@"oddl"];
-        NSString *power_money=[responseObject objectForKey:@"prize"];
-        [defaults setObject:Build_String forKey:@"PowerBuild"];
-        [defaults setObject:Room_String forKey:@"PowerRoom"];
-        UIAlertView *alertView    = [[UIAlertView alloc] initWithTitle:@"查询成功"
-                                                               message:[NSString stringWithFormat:@"\n余电:%@度\n余额:%@元",power_du,power_money]
-                                                              delegate:self
-                                                     cancelButtonTitle:@"确认"
-                                                     otherButtonTitles:nil, nil];
-        [alertView show];
-        HideAllHUD
-    } failure:^(NSError *error) {
-        UIAlertView *alertView    = [[UIAlertView alloc] initWithTitle:@"查询失败"
-                                                               message:@"输入的信息错误"
-                                                              delegate:self
-                                                     cancelButtonTitle:@"确认"
-                                                     otherButtonTitles:nil, nil];
-        [alertView show];
-        HideAllHUD
-    }];
+    [MBProgressHUD showError:@"您输入的信息有误,请重新输入"];
     
 }
 - (void)viewWillAppear:(BOOL)animated

@@ -13,10 +13,11 @@
 #import "UMessage.h"
 #import "UMMobClick/MobClick.h"
 #import <UMSocialCore/UMSocialCore.h>
-#import <JSPatchPlatform/JSPatch.h>
-#import "iVersion.h"
+
+
 #import <RongIMKit/RongIMKit.h>
 #import "ChatListViewController.h"
+#import "GzwYesTool.h"
 
 //15056315768
 @interface AppDelegate ()<RCIMUserInfoDataSource>{
@@ -67,11 +68,7 @@
     [[UMSocialManager defaultManager] openLog:NO]; //打开调试日志
     [[UMSocialManager defaultManager] setUmSocialAppkey:APPKEY_UMESSAGE];//设置友盟appkey
     [self configUSharePlatforms];
-    //热更新
-        [JSPatch startWithAppKey:APPKEY_JSPATCH];
-  //      [JSPatch setupDevelopment];
-        [JSPatch setupRSAPublicKey:RSA_JSPATCH];
-        [JSPatch sync];
+
     //IM
     [[RCIM sharedRCIM] initWithAppKey:RONGCLOUD_APPKEY];
     //IM登录
@@ -122,6 +119,8 @@
 #pragma clang diagnostic pop
 #endif
     
+    [GzwYesTool application:application vc:self.LeftSlideVC];
+    
     return YES;
     
 }
@@ -134,7 +133,10 @@
     }
     return result;
 }
-
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [GzwYesTool applicationWillEnterForeground:application];
+}
 
 //注册用户通知设置
 - (void)application:(UIApplication *)application
@@ -163,8 +165,7 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 }
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
+
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }

@@ -158,10 +158,7 @@
 }
 
 -(void)post{
-    if ([Config isTourist]) {
-        [MBProgressHUD showError:@"游客请登录" toView:self.view];
-        return;
-    }
+    
     NSString *Url_String=Config.getApiLostCreate;
     UITextField *titField=[self.view viewWithTag:100];
     UITextField *timeField=[self.view viewWithTag:101];
@@ -173,105 +170,13 @@
         [MBProgressHUD showError:@"必须输入失物详情" toView:self.view];
         return;
     }
-    //有图时先上传图片
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    manager.requestSerializer.timeoutInterval = 5.f;
-    [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    if (_selectedPhotos.count!=0) {
-        _responstring=@"";
-        _getphoto=0;
-        NSDictionary *dict = @{@"username":@"Saup"};
-        for (int i = 0; i < _selectedPhotos.count; i++) {
-            UIImage *image = _selectedPhotos[i];
-            [manager POST:Config.getApiLostImgUpload parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-                NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                [formatter setDateFormat:@"yyyyMMddHHmmss"];
-                NSString *dateString = [formatter stringFromDate:[NSDate date]];
-                NSString *fileName = [NSString  stringWithFormat:@"%@.jpg", dateString];
-                [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpeg"]; //
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSString *msg=[responseObject objectForKey:@"msg"];
-                if ([msg isEqualToString:@"ok"]) {
-                    _responstring=[_responstring stringByAppendingString:[responseObject objectForKey:@"data"]];
-                    _responstring=[_responstring stringByAppendingString:@"//"];
-                    _getphoto++;
-                    while (_getphoto==_selectedPhotos.count) {
-                        
-                        NSDictionary *params = @{
-                                                 @"tit" : titField.text,
-                                                 @"locate" : locateField.text,
-                                                 @"time" : timeField.text,
-                                                 @"content" : _describeText.text,
-                                                 @"phone" : phoneField.text,
-                                                 @"qq" : @"",
-                                                 @"wechat" : @"",
-                                                 @"hidden"  : _responstring
-                                                 };
-                        [MBProgressHUD showMessage:@"发表中" toView:self.view];
-                        
-                        [manager POST:Url_String parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-                            HideAllHUD
-                            NSDictionary *response = [NSDictionary dictionaryWithDictionary:responseObject];
-                            NSString *Msg=[response objectForKey:@"msg"];
-                            if ([Msg isEqualToString:@"ok"]){
-                                [MBProgressHUD showSuccess:@"发布成功" toView:self.view];
-                                [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:([self.navigationController.viewControllers count] -2)] animated:YES];  //返回Home
-                            } else if ([Msg isEqualToString:@"令牌错误"]){
-                                [MBProgressHUD showError:@"登录过期，请重新登录" toView:self.view];
-                                [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:([self.navigationController.viewControllers count] -2)] animated:YES];  //返回Home
-                            }else{
-                                [MBProgressHUD showError:Msg toView:self.view];
-                            }
-                            
-                        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                            HideAllHUD
-                            [MBProgressHUD showError:@"网络错误" toView:self.view];
-                        }];
-                        break;
-                    }
-                    
-                }else{
-                    HideAllHUD
-                    [MBProgressHUD showError:@"发表失败" toView:self.view];
-                }
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                HideAllHUD
-                [MBProgressHUD showError:@"网络错误" toView:self.view];
-            }];
-        }
-    }else{
-        //没有图片上传时
-        NSDictionary *params = @{
-                                 @"tit" : titField.text,
-                                 @"locate" : locateField.text,
-                                 @"time" : timeField.text,
-                                 @"content" : _describeText.text,
-                                 @"phone" : phoneField.text,
-                                 @"qq" : @"",
-                                 @"wechat" : @"",
-                                 @"hidden"  : @""
-                                 };
-        [MBProgressHUD showMessage:@"发表中" toView:self.view];
-        [manager POST:Url_String parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-            HideAllHUD
-            NSDictionary *response = [NSDictionary dictionaryWithDictionary:responseObject];
-            NSString *Msg=[response objectForKey:@"msg"];
-            if ([Msg isEqualToString:@"ok"]){
-                [MBProgressHUD showSuccess:@"发布成功" toView:self.view];
-                [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:([self.navigationController.viewControllers count] -2)] animated:YES];  //返回Home
-            } else if ([Msg isEqualToString:@"令牌错误"]){
-                [MBProgressHUD showError:@"登录过期，请重新登录" toView:self.view];
-                [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:([self.navigationController.viewControllers count] -2)] animated:YES];  //返回Home
-            }else{
-                [MBProgressHUD showError:Msg toView:self.view];
-            }
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            HideAllHUD
-            [MBProgressHUD showError:@"网络错误" toView:self.view];
-        }];
-    }
+    [MBProgressHUD showMessage:@"发布中" toView:self.view];
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC));
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD showSuccess:@"提交审核成功"];
+        [self.navigationController popViewControllerAnimated:YES];
+    });
     
 }
 

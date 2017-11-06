@@ -32,14 +32,14 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
 
 
-    if (!([[Config getVedio] isEqual:[NSNull null]]||
-          [Config getVedio]==nil)) {
-        NSDictionary *Dic=[Config getVedio];
-        [self loadData:Dic[@"links"]];
-        [Config saveVedio480p:Dic[@"480P"]];
-        [Config saveVedio720p:Dic[@"720P"]];
-        [Config saveVedio1080p:Dic[@"1080P"]];
-    }
+//    if (!([[Config getVedio] isEqual:[NSNull null]]||
+//          [Config getVedio]==nil)) {
+//        NSDictionary *Dic=[Config getVedio];
+//        [self loadData:Dic[@"links"]];
+//        [Config saveVedio480p:Dic[@"480P"]];
+//        [Config saveVedio720p:Dic[@"720P"]];
+//        [Config saveVedio1080p:Dic[@"1080P"]];
+//    }
     //空白状态
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
@@ -140,7 +140,7 @@
         [self.tableView.mj_header endRefreshing];
     }failure:^(NSError *error) {
         [self.tableView.mj_header endRefreshing];
-        [MBProgressHUD showError:@"网络错误"toView:self.view];
+//        [MBProgressHUD showError:@"网络错误"toView:self.view];
     }];
 }
 #pragma mark - 空白状态代理

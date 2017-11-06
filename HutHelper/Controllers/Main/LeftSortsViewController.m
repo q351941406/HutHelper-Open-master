@@ -108,8 +108,8 @@
         itemCell.Img.image=[UIImage imageNamed:@"ico_left_sign-out"];
         return itemCell;
     } else if (indexPath.row == 5) {
-        itemCell.Text.text                = @"关于";
-        itemCell.Img.image=[UIImage imageNamed:@"ico_left_about"];
+        itemCell.Text.text                = @"钱包";
+        itemCell.Img.image=[UIImage imageNamed:@"icons8-money-bag"];
         return itemCell;
     } else if (indexPath.row == 6) {
         itemCell.Text.text                = @"反馈";
@@ -185,7 +185,10 @@
        
     }
     if (indexPath.row == 5) {  //关于
-        [Config pushViewController:@"About"];
+        UIStoryboard *mainStoryBoard              = [UIStoryboard storyboardWithName:@"dfdfdf" bundle:nil];
+        UIViewController *secondViewController = mainStoryBoard.instantiateInitialViewController;
+        AppDelegate *tempAppDelegate              = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [tempAppDelegate.mainNavigationController pushViewController:secondViewController animated:YES];
     }
     if (indexPath.row == 6) {  //反馈
         [Config pushViewController:@"Feedback"];

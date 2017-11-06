@@ -156,84 +156,34 @@
 }
 -(void)hand{
     [MBProgressHUD showMessage:@"加载中" toView:self.view];
-    [APIRequest GET:[Config getApiOtherGoods:1 withId:_user_id] parameters:nil success:^(id responseObject) {
-        HideAllHUD
-        NSDictionary *dic1 = [NSDictionary dictionaryWithObject:responseObject forKey:@""];
-        NSArray *Hand           = [dic1 objectForKey:@""];
-        if (Hand.count>0) {
-            NSMutableArray *data=[[NSMutableArray alloc]init];
-            NSDictionary *a=@{@"page_cur":@"1",
-                              @"page_max":@67
-                              };
-            [data addObject:a];
-            [data addObjectsFromArray:Hand];
-            HandTableViewController *hand=[[HandTableViewController alloc]init];
-            hand.otherHandArray=[data mutableCopy];
-            hand.otherName=_name;
-            [self.navigationController pushViewController:hand animated:YES];
-        }else{
-            [MBProgressHUD showError:@"对方没有发布的商品" toView:self.view];
-        }
-    }failure:^(NSError *error) {
-        HideAllHUD
-        [MBProgressHUD showError:@"网络超时" toView:self.view];
-    }];
+    __block UIViewController *weakSelf = self;
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC));
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD showError:@"对方没有发布的商品" toView:self.view];
+    });
 }
 -(void)say{
-    NSString *Url_String=[NSString stringWithFormat:@"%@/%@",Config.getApiMomentsUser,_user_id];
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     [MBProgressHUD showMessage:@"加载中" toView:self.view];
-    [APIRequest GET:Url_String parameters:nil success:^(id responseObject) {
-        HideAllHUD
-        NSDictionary *Say_All = [NSDictionary dictionaryWithDictionary:responseObject];
-        if ([[Say_All objectForKey:@"msg"]isEqualToString:@"ok"]) {
-            NSDictionary *Say_Data=[Say_All objectForKey:@"data"];
-            NSArray *Say_content=[Say_Data objectForKey:@"posts"];//加载该页数据
-            if (Say_content.count!=0) {
-                [defaults setObject:Say_content forKey:@"otherSay"];
-                [defaults synchronize];
-                [Config setIs:1];
-                MomentsViewController *Say      = [[MomentsViewController alloc] init];
-                [self.navigationController pushViewController:Say animated:YES];
-            }else{
-                [MBProgressHUD showError:@"对方没有发布的说说" toView:self.view];
-            }
-        }
-        else{
-            [MBProgressHUD showError:@"网络错误" toView:self.view];
-        }
-        
-    }failure:^(NSError *error) {
-        HideAllHUD
-        [MBProgressHUD showError:@"网络错误" toView:self.view];
-        
-    }];
+    __block UIViewController *weakSelf = self;
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC));
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+       [MBProgressHUD showError:@"对方没有发布的说说" toView:weakSelf.view];
+    });
+
+    
+    
 }
 -(void)lost{
     [MBProgressHUD showMessage:@"加载中" toView:self.view];
-    //发起请求
-    [APIRequest GET:[Config getApiLostUserOther:_user_id] parameters:nil success:^(id responseObject) {
-        NSDictionary *responseDic = [NSDictionary dictionaryWithDictionary:responseObject];
-        HideAllHUD
-        if ([[responseDic objectForKey:@"msg"]isEqualToString:@"ok"]) {
-            NSDictionary *responseDataDic=[responseDic objectForKey:@"data"];
-            NSArray *responseDataPostArray=[responseDataDic objectForKey:@"posts"];//加载该页数据
-            if (responseDataPostArray.count!=0) {
-                LostViewController *lostViewController=[[LostViewController alloc]init];
-                lostViewController.otherLostArray=responseDataPostArray;
-                lostViewController.otherName=_name;
-                [self.navigationController pushViewController:lostViewController animated:YES];
-            }else{
-                [MBProgressHUD showError:@"对方没有发布的失物" toView:self.view];
-            }
-        }
-        else{
-            [MBProgressHUD showError:[responseDic objectForKey:@"msg"] toView:self.view];
-        }
-    }failure:^(NSError *error) {
-        HideAllHUD
-        [MBProgressHUD showError:@"网络超时" toView:self.view];
-    }];
+    __block UIViewController *weakSelf = self;
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC));
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD showError:@"对方没有发布的失物" toView:weakSelf.view];
+    });
+    
 }
 -(UIImage*) circleImage:(UIImage*) image{
     UIGraphicsBeginImageContext(image.size);

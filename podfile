@@ -19,4 +19,6 @@ target "HutHelper" do
     pod 'DZNEmptyDataSet'
     pod 'RongCloudIM/IMLib', '~> 2.8.3'
     pod 'RongCloudIM/IMKit', '~> 2.8.3'
+    pod 'MJExtension', '~> 3.0.13'
+    pod 'BmobSDK'
 end

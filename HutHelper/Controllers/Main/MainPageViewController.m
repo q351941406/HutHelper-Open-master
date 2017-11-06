@@ -235,10 +235,7 @@ int class_error_;
     [tempAppDelegate.mainNavigationController pushViewController:hand animated:YES];
 } //二手市场
 - (IBAction)Score:(id)sender {
-    if ([Config isTourist]) {
-        [MBProgressHUD showError:@"游客请登录" toView:self.view];
-        return;
-    }
+
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     //如果没有缓存数据
     if((![defaults objectForKey:@"Score"])||(![defaults objectForKey:@"ScoreRank"])){
@@ -325,7 +322,8 @@ int class_error_;
     }
 } ///图书馆
 - (IBAction)Library:(id)sender {
-    [MBProgressHUD showError:@"暂无图书可看"];
+    [MBProgressHUD showError:@"暂无图书可看" toView:self.view];
+//    [MBProgressHUD showError:@"暂无图书可看" ];
 } //图书馆
 - (IBAction)Exam:(id)sender {
     if ([Config isTourist]) {

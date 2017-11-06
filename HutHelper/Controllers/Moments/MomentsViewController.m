@@ -110,7 +110,7 @@
         SecondTitle.alignment = NSTextAlignmentCenter;
         
         _items = [@[firstTitle,
-                    SecondTitle
+                    
                     ] mutableCopy];
     }
     return _items;
@@ -154,10 +154,6 @@
     }];
 }
 -(void)addSay{
-    if ([Config isTourist]) {
-        [MBProgressHUD showError:@"游客请登录" toView:self.view];
-        return;
-    }
     [Config pushViewController:@"AddSay"];
 }
 - (id) init{

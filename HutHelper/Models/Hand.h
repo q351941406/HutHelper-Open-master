@@ -19,6 +19,6 @@
 @property(nonatomic,copy)NSString *created_on;
 /**商品id*/
 @property(nonatomic,copy)NSString *good_id;
-
+@property(nonatomic,copy)NSString *phone;
 -(instancetype)initWithDic:(NSDictionary*)Dic;
 @end

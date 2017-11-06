@@ -225,7 +225,7 @@
         logoutItem.foreColor = [UIColor blackColor];
         logoutItem.alignment = NSTextAlignmentCenter;
         _items = [@[menuTitle,
-                    logoutItem
+                    
                     ] mutableCopy];
     }
     return _items;
@@ -235,35 +235,11 @@
     [self.navigationController pushViewController:lostAddViewController2 animated:YES];
 }
 -(void)myLost{
-    if ([Config isTourist]) {
-        [MBProgressHUD showError:@"游客请登录" toView:self.view];
-        return;
-    }
-    [MBProgressHUD showMessage:@"加载中" toView:self.view];
-    //发起请求
-    [APIRequest GET:Config.getApiLostUser parameters:nil success:^(id responseObject) {
-        NSDictionary *responseDic = [NSDictionary dictionaryWithDictionary:responseObject];
-        if ([[responseDic objectForKey:@"msg"]isEqualToString:@"ok"]) {
-            NSDictionary *responseDataDic=[responseDic objectForKey:@"data"];
-            NSArray *responseDataPostArray=[responseDataDic objectForKey:@"posts"];//加载该页数据
-            if (responseDataPostArray.count!=0) {
-                HideAllHUD
+    
                 LostViewController *lostViewController=[[LostViewController alloc]init];
-                lostViewController.myLostArray=responseDataPostArray;
+                lostViewController.myLostArray=@[];
                 [self.navigationController pushViewController:lostViewController animated:YES];
-            }else{
-                HideAllHUD
-                [MBProgressHUD showError:@"您没有发布的失物" toView:self.view];
-            }
-        }
-        else{
-            HideAllHUD
-            [MBProgressHUD showError:[responseDic objectForKey:@"msg"] toView:self.view];
-        }
-    }failure:^(NSError *error) {
-        [MBProgressHUD showError:@"网络超时" toView:self.view];
-        HideAllHUD
-    }];
+    
 }
 
 #pragma mark - 空白状态代理

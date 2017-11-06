@@ -27,6 +27,8 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
+  - BmobSDK (2.2.3):
+    - WechatOpenSDK (~> 1.7.7)
   - DJRefresh (1.0.5)
   - DTKDropdownMenu (0.0.4):
     - Masonry (~> 0.6)
@@ -34,6 +36,7 @@ PODS:
   - LGPlusButtonsView (1.1.1)
   - Masonry (0.6.4)
   - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - Reachability (3.2)
   - RongCloudIM/IMKit (2.8.14):
@@ -56,16 +59,19 @@ PODS:
     - UMengUShare/Core
   - UMengUShare/UI (6.4.5):
     - UMengUShare/Core
+  - WechatOpenSDK (1.7.9)
   - YCXMenu (0.0.11)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - ASIHTTPRequest
+  - BmobSDK
   - DJRefresh (~> 1.0.5)
   - DTKDropdownMenu (~> 0.0.4)
   - DZNEmptyDataSet
   - LGPlusButtonsView (~> 1.1.0)
   - MBProgressHUD (~> 1.0.0)
+  - MJExtension (~> 3.0.13)
   - MJRefresh
   - RongCloudIM/IMKit (~> 2.8.3)
   - RongCloudIM/IMLib (~> 2.8.3)
@@ -82,12 +88,14 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
+  BmobSDK: dd61cf835d063303fb53b29465fcb3e9718b36f2
   DJRefresh: 32b3776546004faddddc28035442ba15e07c5f1b
   DTKDropdownMenu: 3a3d8afc4f70fab50a5a8131aadc8b383ef54891
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   LGPlusButtonsView: 57878cd3d461d0ee2042f5b7b25d1c017e22a084
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RongCloudIM: 04334f9285db8bc5e2f69bda0e3ce5431a6bec72
@@ -96,8 +104,9 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   UMengUShare: a5711c54e640b04e3048e931d2b88d50f9cfa55c
+  WechatOpenSDK: 1fe7e3b07db860d6a936c3ff4a5aba6b890958d9
   YCXMenu: 6003bcd20d8ac72e3eb3c442c97ed21948c6dc1f
 
-PODFILE CHECKSUM: 33034b8f18f7092b6f5b635bd36b01c18101ce45
+PODFILE CHECKSUM: 10942fe4aa6a4b197f1343d05af26c4fafa9c7a0
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

@@ -227,7 +227,7 @@
         SecondTitle.foreColor = [UIColor blackColor];
         SecondTitle.alignment = NSTextAlignmentCenter;
         _items = [@[firstTitle,
-                    SecondTitle
+                    
                     ] mutableCopy];
     }
     return _items;

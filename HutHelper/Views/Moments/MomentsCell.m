@@ -349,53 +349,7 @@
     */
 }
 -(void)btnComment{
-    if ([Config isTourist]) {
-        [MBProgressHUD showError:@"游客请登录" toView:self];
-        return;
-    }
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    NSString *Url_String=[NSString stringWithFormat:@"%@/%@/%@/%@",Config.getApiMomentsCreateComment,Config.getStudentKH,Config.getRememberCodeApp,_data.moments_id];
-    [UUInputAccessoryView showKeyboardConfige:^(UUInputConfiger * _Nonnull configer) {
-        configer.keyboardType = UIKeyboardTypeDefault;
-        configer.content = @"";
-        configer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    }block:^(NSString * _Nonnull contentStr) {
-        // code
-        if (contentStr.length == 0) return ;
-        // NSLog(@"%@",contentStr);
-        // 1.创建AFN管理者
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-        manager.requestSerializer.timeoutInterval = 4.f;
-        [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-        // 2.利用AFN管理者发送请求
-        NSDictionary *params = @{
-                                 @"comment" : contentStr
-                                 };
-        [MBProgressHUD showMessage:@"发表中" toView:self.contentView];
-        [manager POST:Url_String parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSDictionary *response = [NSDictionary dictionaryWithDictionary:responseObject];
-            NSString *Msg=[response objectForKey:@"msg"];
-            if ([Msg isEqualToString:@"ok"])   {
-                _momentsTable.reload;
-                [MBProgressHUD hideHUDForView:self.contentView animated:YES];
-                [MBProgressHUD showSuccess:@"评论成功" toView:self];
-            }
-            else if ([Msg isEqualToString:@"令牌错误"]){
-                [MBProgressHUD hideHUDForView:self.contentView animated:YES];
-                [MBProgressHUD showError:@"登录过期，请重新登录" toView:self];
-                
-            }
-            else{
-                [MBProgressHUD hideHUDForView:self.contentView animated:YES];
-                [MBProgressHUD showError:Msg toView:self];
-                
-            }
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            [MBProgressHUD hideHUDForView:self.contentView animated:YES];
-            [MBProgressHUD showError:@"网络错误" toView:self];
-        }];
-    }];
+    
 }
 
 -(void)btnLikes{

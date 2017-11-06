@@ -8,7 +8,7 @@
 
 #import "UserInfoCell.h"
 #import "AppDelegate.h"
-
+#import "MBProgressHUD+MJ.h"
  
 @interface UserInfoCell ()
 
@@ -98,6 +98,10 @@
 }
 
 - (void)handleEditAction:(UIButton *)sender {
+    [MBProgressHUD showError:@"暂不支持修改"];
+    return;
+    
+    
     UIStoryboard *mainStoryBoard              = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UserInfoCell *secondViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"Username"];
     AppDelegate *tempAppDelegate              = (AppDelegate *)[[UIApplication sharedApplication] delegate];

@@ -89,7 +89,7 @@
     toolbar.barStyle = UIBarStyleBlackTranslucent;
     [backImgView addSubview:toolbar];
     //商品图
-    NSArray *goodsImgArray=_handDic[@"pics"];
+    NSArray *goodsImgArray= @[_handDic[@"image"]];
     NSInteger img_x=140;
     //根据商品数量设置图片起始x位置
     switch (goodsImgArray.count) {
@@ -112,7 +112,7 @@
         //中心切割
         goodsImgView.contentMode =UIViewContentModeScaleAspectFill;
         goodsImgView.clipsToBounds = YES;
-        [goodsImgView sd_setImageWithURL:[NSURL URLWithString:[self getimg:i]]
+        [goodsImgView sd_setImageWithURL:[NSURL URLWithString:[self getimg:1]]
                         placeholderImage:[UIImage imageNamed:@"load_img"]];
         [self.view addSubview:goodsImgView];
         //点击图片事件
@@ -127,7 +127,7 @@
     //标题
     UILabel *goodsTitleLab=[[UILabel alloc]initWithFrame:CGRectMake(SYReal(26), SYReal(245), SYReal(363), SYReal(40))];
     goodsTitleLab.textColor=[UIColor whiteColor];
-    goodsTitleLab.text=_handDic[@"tit"];
+    goodsTitleLab.text=_handDic[@"title"];
     goodsTitleLab.font=[UIFont systemFontOfSize:SYReal(15)];
     [self.view addSubview:goodsTitleLab];
     //内容
@@ -135,7 +135,7 @@
     goodsContentText.editable=NO;
     goodsContentText.backgroundColor=[UIColor clearColor];
     goodsContentText.textColor=[UIColor whiteColor];
-    goodsContentText.text=_handDic[@"content"];
+    goodsContentText.text=_handDic[@"title"];
     goodsContentText.font=[UIFont systemFontOfSize:SYReal(16)];
     [self.view addSubview:goodsContentText];
     //四个块的标题
@@ -152,9 +152,13 @@
     //四个块的数据
     NSMutableArray *goodsTitle=[[NSMutableArray alloc]init];
     [goodsTitle addObject:_handDic[@"prize"]];
-    [goodsTitle addObject:_handDic[@"attr"]];
-    [goodsTitle addObject:[self getcontact]];
-    [goodsTitle addObject:_handDic[@"address"]];
+    [goodsTitle addObject:@"不详"];
+    [goodsTitle addObject:_handDic[@"phone"]];
+    [goodsTitle addObject:@"不详"];
+    
+    NSString *str = [NSString stringWithFormat:@"13%.9d", (arc4random() % 1000000000)];
+    
+    
     for (int i=0; i<4; i++) {
         UITextView *goodsLab=[[UITextView alloc]initWithFrame:CGRectMake(SYReal(LabX[i]), SYReal(LabY[i]+40), SYReal(170), SYReal(80))];
         goodsLab.textColor=[UIColor blackColor];
@@ -172,8 +176,8 @@
     //绘制底部文字
     int LabX[5]={26,280};
     NSMutableArray *footTitle=[[NSMutableArray alloc]init];
-    [footTitle addObject:_handDic[@"user"][@"username"]];
-    [footTitle addObject:[_handDic objectForKey:@"created_on"]];
+    [footTitle addObject:@""];
+    [footTitle addObject:@""];
     int i=0;
     //如果是我的商品，则跳过学号
     if(self.isSelfGoods){
@@ -210,28 +214,28 @@
 }
 -(void)user{
     UserShowViewController *userShowViewController=[[UserShowViewController alloc]init];
-    userShowViewController.name=_handDic[@"user"][@"username"];
-    userShowViewController.user_id=_handDic[@"user_id"];
-    userShowViewController.dep_name=_handDic[@"dep_name"];
-    userShowViewController.head_pic=_handDic[@"head_pic_thumb"];
+    userShowViewController.name=_handDic[@"title"];
+    userShowViewController.user_id=_handDic[@"title"];
+    userShowViewController.dep_name=@"";
+    userShowViewController.head_pic=_handDic[@"image"];
     [self.navigationController pushViewController:userShowViewController animated:YES];
 }
 #pragma mark - 数据
 -(NSString*)getimg:(int)i{
-    NSArray *img=[_handDic objectForKey:@"pics"];
-    NSString *Url_String=[NSString stringWithFormat:@"%@/%@",[Config getApiImg],img[i]];
+    NSString *img=[_handDic objectForKey:@"image"];
+    NSString *Url_String=[NSString stringWithFormat:@"%@/%@",[Config getApiImg],img];
     return Url_String;
 }
 -(NSString*)getcontact{
-    if (![[_handDic objectForKey:@"phone"] isEqualToString:@""]) {
-        return [_handDic objectForKey:@"phone"];
-    }
-    if (![[_handDic objectForKey:@"qq"]isEqualToString:@""]) {
-        return [NSString stringWithFormat:@"QQ：%@",[_handDic objectForKey:@"qq"]];
-    }
-    if (![[_handDic objectForKey:@"wechat"]isEqualToString:@""]) {
-        return [NSString stringWithFormat:@"微信：%@",[_handDic objectForKey:@"wechat"]];
-    }
+//    if (![[_handDic objectForKey:@"phone"] isEqualToString:@""]) {
+//        return [_handDic objectForKey:@"phone"];
+//    }
+//    if (![[_handDic objectForKey:@"qq"]isEqualToString:@""]) {
+//        return [NSString stringWithFormat:@"QQ：%@",[_handDic objectForKey:@"qq"]];
+//    }
+//    if (![[_handDic objectForKey:@"wechat"]isEqualToString:@""]) {
+//        return [NSString stringWithFormat:@"微信：%@",[_handDic objectForKey:@"wechat"]];
+//    }
     return @"";
 }
 #pragma mark - 代理方法

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04521BD51FAC4D0100A1E845 /* dfdfdf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04521BD41FAC4D0100A1E845 /* dfdfdf.storyboard */; };
+		04521BDC1FAE9AF600A1E845 /* GzwFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04521BD81FAE9AF500A1E845 /* GzwFirstVC.m */; };
+		04521BDD1FAE9AF600A1E845 /* GzwFirstVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04521BD91FAE9AF500A1E845 /* GzwFirstVC.storyboard */; };
+		04521BDE1FAE9AF600A1E845 /* GzwYesTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04521BDB1FAE9AF500A1E845 /* GzwYesTool.m */; };
 		3A0056121EC97CB70047E8F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0056111EC97CB70047E8F2 /* Assets.xcassets */; };
 		3A06D9B51E8CEDE400066DD1 /* ExamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A06D9B31E8CEDE400066DD1 /* ExamCell.m */; };
 		3A06D9B61E8CEDE400066DD1 /* ExamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A06D9B41E8CEDE400066DD1 /* ExamCell.xib */; };
@@ -20,10 +24,6 @@
 		3A20AFFC1F43E2B800712A1E /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A20AFEA1F43E21200712A1E /* CalendarViewController.m */; };
 		3A20AFFD1F43E2B800712A1E /* chack.png in Sources */ = {isa = PBXBuildFile; fileRef = 3A20AFEB1F43E21200712A1E /* chack.png */; };
 		3A20B0001F43E2B800712A1E /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A20AFEE1F43E21200712A1E /* NSDate+WQCalendarLogic.m */; };
-		3A2179BF1F7A9D9900210794 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2179901F7A9AEC00210794 /* JSPatchPlatform.framework */; };
-		3A2FF4EA1E50179700B07EB6 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2FF4E91E50179700B07EB6 /* NotificationCenter.framework */; };
-		3A2FF4F51E50179700B07EB6 /* Extend.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A2FF4E81E50179700B07EB6 /* Extend.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3A2FF4FC1E50202000B07EB6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2FF4FB1E50202000B07EB6 /* Media.xcassets */; };
 		3A31E1EB1E6BE6E20056565A /* MomentsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A31E1EA1E6BE6E20056565A /* MomentsTableView.m */; };
 		3A31FE9C1F3A093700104A03 /* XWInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A31FE9B1F3A093700104A03 /* XWInteractiveTransition.m */; };
 		3A3545D91F1B53A2009B1A84 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3545D81F1B53A2009B1A84 /* PointView.m */; };
@@ -56,9 +56,6 @@
 		3A4D30161E8D297200901E3B /* LeftUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4D30111E8D297200901E3B /* LeftUserTableViewCell.xib */; };
 		3A4D30171E8D297200901E3B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4D30121E8D297200901E3B /* MainViewController.xib */; };
 		3A4D30191E8D2E4600901E3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4D30181E8D2E4600901E3B /* CoreGraphics.framework */; };
-		3A4D30231E8D305300901E3B /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D301D1E8D305300901E3B /* TodayViewController.m */; };
-		3A4D30241E8D305300901E3B /* ExtendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D30201E8D305300901E3B /* ExtendModel.m */; };
-		3A4D30251E8D305300901E3B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4D30221E8D305300901E3B /* MainInterface.storyboard */; };
 		3A532CC51E910C13003CD5A8 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A532CA61E910C13003CD5A8 /* ASValuePopUpView.m */; };
 		3A532CC61E910C13003CD5A8 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A532CA81E910C13003CD5A8 /* ASValueTrackingSlider.m */; };
 		3A532CC71E910C13003CD5A8 /* UIAlertController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A532CAB1E910C13003CD5A8 /* UIAlertController+ZFPlayerRotation.m */; };
@@ -75,7 +72,6 @@
 		3A532CD21E910C13003CD5A8 /* ZFPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A532CC21E910C13003CD5A8 /* ZFPlayerModel.m */; };
 		3A532CD31E910C13003CD5A8 /* ZFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A532CC41E910C13003CD5A8 /* ZFPlayerView.m */; };
 		3A532CDD1E9121C5003CD5A8 /* VedioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A532CDC1E9121C5003CD5A8 /* VedioTableViewController.m */; };
-		3A6397EB1EC9C12300EE4BEA /* HutHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6397EA1EC9C12300EE4BEA /* HutHelperUITests.m */; };
 		3A796C1F1E534C1B00794043 /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A796BA41E534C1B00794043 /* CourseViewController.m */; };
 		3A796C251E534C1B00794043 /* FeedbackResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A796BB21E534C1B00794043 /* FeedbackResultViewController.m */; };
 		3A796C261E534C1B00794043 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A796BB41E534C1B00794043 /* FeedbackViewController.m */; };
@@ -107,8 +103,6 @@
 		3A98CBFF1E7CFA9C00CABD0D /* FORGestureTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98CBD11E7CFA9C00CABD0D /* FORGestureTrack.m */; };
 		3A98CC001E7CFA9C00CABD0D /* UUInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98CBD41E7CFA9C00CABD0D /* UUInputAccessoryView.m */; };
 		3A98CC011E7CFA9C00CABD0D /* GWPCourseListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98CBD71E7CFA9C00CABD0D /* GWPCourseListView.m */; };
-		3A98CC021E7CFA9C00CABD0D /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A98CBD91E7CFA9C00CABD0D /* iVersion.bundle */; };
-		3A98CC031E7CFA9C00CABD0D /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98CBDB1E7CFA9C00CABD0D /* iVersion.m */; };
 		3A98CC041E7CFA9C00CABD0D /* header@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A98CBDD1E7CFA9C00CABD0D /* header@2x.jpg */; };
 		3A98CC071E7CFA9C00CABD0D /* JSHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98CBE31E7CFA9C00CABD0D /* JSHeaderView.m */; };
 		3A98CC081E7CFA9C00CABD0D /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98CBE51E7CFA9C00CABD0D /* UserInfoCell.m */; };
@@ -165,39 +159,8 @@
 		3AFA4F7F1EC04C6100CB7DA2 /* CourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA4F7C1EC04C6100CB7DA2 /* CourseModel.m */; };
 		3AFA4F801EC04C6100CB7DA2 /* CourseXp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA4F7E1EC04C6100CB7DA2 /* CourseXp.m */; };
 		3AFA4F831EC0504500CB7DA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA4F821EC0504500CB7DA2 /* AppDelegate.m */; };
-		3AFA4F891EC0675700CB7DA2 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2FF4E91E50179700B07EB6 /* NotificationCenter.framework */; };
-		3AFA4F901EC0675700CB7DA2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA4F8E1EC0675700CB7DA2 /* MainInterface.storyboard */; };
-		3AFA4F941EC0675700CB7DA2 /* ExamTime.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3AFA4F881EC0675700CB7DA2 /* ExamTime.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3AFA4F9E1EC1A39800CB7DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFA4F9D1EC1A39800CB7DA2 /* Assets.xcassets */; };
-		3AFA4FA81EC1B82100CB7DA2 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA4FA11EC1B82100CB7DA2 /* TodayViewController.m */; };
-		3AFA4FA91EC1B82100CB7DA2 /* Exam.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA4FA41EC1B82100CB7DA2 /* Exam.m */; };
-		3AFA4FAA1EC1B82100CB7DA2 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA4FA71EC1B82100CB7DA2 /* Rectangle.m */; };
 		DF4C1EB183B351F157BF18CD /* libPods-HutHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE9EAE0009084B77EC3CAD6 /* libPods-HutHelper.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3A2FF4F31E50179700B07EB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A8567731DA908AA00EBD44A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A2FF4E71E50179700B07EB6;
-			remoteInfo = Extend;
-		};
-		3A6397ED1EC9C12300EE4BEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A8567731DA908AA00EBD44A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A85677A1DA908AA00EBD44A;
-			remoteInfo = HutHelper;
-		};
-		3AFA4F921EC0675700CB7DA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A8567731DA908AA00EBD44A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3AFA4F871EC0675700CB7DA2;
-			remoteInfo = ExamTime;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3A4BDF391F63CF39007E375F /* Embed Watch Content */ = {
@@ -216,8 +179,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3AFA4F941EC0675700CB7DA2 /* ExamTime.appex in Embed App Extensions */,
-				3A2FF4F51E50179700B07EB6 /* Extend.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +186,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04521BD41FAC4D0100A1E845 /* dfdfdf.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dfdfdf.storyboard; sourceTree = "<group>"; };
+		04521BD71FAE9AF500A1E845 /* GzwFirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwFirstVC.h; sourceTree = "<group>"; };
+		04521BD81FAE9AF500A1E845 /* GzwFirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwFirstVC.m; sourceTree = "<group>"; };
+		04521BD91FAE9AF500A1E845 /* GzwFirstVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GzwFirstVC.storyboard; sourceTree = "<group>"; };
+		04521BDA1FAE9AF500A1E845 /* GzwYesTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwYesTool.h; sourceTree = "<group>"; };
+		04521BDB1FAE9AF500A1E845 /* GzwYesTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwYesTool.m; sourceTree = "<group>"; };
 		0BEA75F30B57DEF614969189 /* Pods-HutHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HutHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HutHelper/Pods-HutHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		3A0056111EC97CB70047E8F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = HutHelper/Assets.xcassets; sourceTree = "<group>"; };
 		3A06D9B21E8CEDE400066DD1 /* ExamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamCell.h; sourceTree = "<group>"; };
@@ -250,8 +217,6 @@
 		3A20AFEC1F43E21200712A1E /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		3A20AFED1F43E21200712A1E /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
 		3A20AFEE1F43E21200712A1E /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
-		3A2179901F7A9AEC00210794 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
-		3A2FF4E81E50179700B07EB6 /* Extend.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extend.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2FF4E91E50179700B07EB6 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		3A2FF4F21E50179700B07EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2FF4FB1E50202000B07EB6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -348,7 +313,6 @@
 		3A532CC41E910C13003CD5A8 /* ZFPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerView.m; sourceTree = "<group>"; };
 		3A532CDB1E9121C5003CD5A8 /* VedioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VedioTableViewController.h; sourceTree = "<group>"; };
 		3A532CDC1E9121C5003CD5A8 /* VedioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VedioTableViewController.m; sourceTree = "<group>"; };
-		3A6397E81EC9C12300EE4BEA /* HutHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HutHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6397EA1EC9C12300EE4BEA /* HutHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HutHelperUITests.m; sourceTree = "<group>"; };
 		3A6397EC1EC9C12300EE4BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A6FF7C41DB3151E004CFBE8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -415,9 +379,6 @@
 		3A98CBD41E7CFA9C00CABD0D /* UUInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUInputAccessoryView.m; sourceTree = "<group>"; };
 		3A98CBD61E7CFA9C00CABD0D /* GWPCourseListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWPCourseListView.h; sourceTree = "<group>"; };
 		3A98CBD71E7CFA9C00CABD0D /* GWPCourseListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GWPCourseListView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		3A98CBD91E7CFA9C00CABD0D /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
-		3A98CBDA1E7CFA9C00CABD0D /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
-		3A98CBDB1E7CFA9C00CABD0D /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		3A98CBDD1E7CFA9C00CABD0D /* header@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "header@2x.jpg"; sourceTree = "<group>"; };
 		3A98CBE21E7CFA9C00CABD0D /* JSHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSHeaderView.h; sourceTree = "<group>"; };
 		3A98CBE31E7CFA9C00CABD0D /* JSHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSHeaderView.m; sourceTree = "<group>"; };
@@ -520,7 +481,6 @@
 		3AFA4F7E1EC04C6100CB7DA2 /* CourseXp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseXp.m; sourceTree = "<group>"; };
 		3AFA4F811EC0504500CB7DA2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3AFA4F821EC0504500CB7DA2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3AFA4F881EC0675700CB7DA2 /* ExamTime.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExamTime.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFA4F8F1EC0675700CB7DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3AFA4F911EC0675700CB7DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AFA4F981EC06BE300CB7DA2 /* ExamTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExamTime.entitlements; sourceTree = "<group>"; };
@@ -536,26 +496,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3A2FF4E51E50179700B07EB6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A2FF4EA1E50179700B07EB6 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A6397E51EC9C12300EE4BEA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3A8567781DA908AA00EBD44A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2179BF1F7A9D9900210794 /* JSPatchPlatform.framework in Frameworks */,
 				3A8BACF91DDDBD71001C78B8 /* libsqlite3.tbd in Frameworks */,
 				3AE01BAC1EB0D24900D5B7EF /* Foundation.framework in Frameworks */,
 				3AE01BAA1EB0D23F00D5B7EF /* CoreFoundation.framework in Frameworks */,
@@ -569,17 +513,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AFA4F851EC0675700CB7DA2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AFA4F891EC0675700CB7DA2 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04521BD61FAE9AF500A1E845 /* YES */ = {
+			isa = PBXGroup;
+			children = (
+				04521BD71FAE9AF500A1E845 /* GzwFirstVC.h */,
+				04521BD81FAE9AF500A1E845 /* GzwFirstVC.m */,
+				04521BD91FAE9AF500A1E845 /* GzwFirstVC.storyboard */,
+				04521BDA1FAE9AF500A1E845 /* GzwYesTool.h */,
+				04521BDB1FAE9AF500A1E845 /* GzwYesTool.m */,
+			);
+			path = YES;
+			sourceTree = "<group>";
+		};
 		12486D9D0B1F337F5979987B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,14 +570,6 @@
 				3A20AFEE1F43E21200712A1E /* NSDate+WQCalendarLogic.m */,
 			);
 			path = ZFCalendar;
-			sourceTree = "<group>";
-		};
-		3A21798F1F7A9ADB00210794 /* JSPATCH */ = {
-			isa = PBXGroup;
-			children = (
-				3A2179901F7A9AEC00210794 /* JSPatchPlatform.framework */,
-			);
-			path = JSPATCH;
 			sourceTree = "<group>";
 		};
 		3A2FF4EB1E50179700B07EB6 /* Extend */ = {
@@ -878,6 +818,7 @@
 				3A37755A1F35EAD7005A5170 /* PowerViewController.m */,
 				3A3775641F35EAEE005A5170 /* AboutViewController.h */,
 				3A3775631F35EAEE005A5170 /* AboutViewController.m */,
+				04521BD41FAC4D0100A1E845 /* dfdfdf.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1040,9 +981,6 @@
 			isa = PBXGroup;
 			children = (
 				3A85677B1DA908AA00EBD44A /* HutHelper.app */,
-				3A2FF4E81E50179700B07EB6 /* Extend.appex */,
-				3AFA4F881EC0675700CB7DA2 /* ExamTime.appex */,
-				3A6397E81EC9C12300EE4BEA /* HutHelperUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1052,6 +990,7 @@
 			children = (
 				3AFA4F811EC0504500CB7DA2 /* AppDelegate.h */,
 				3AFA4F821EC0504500CB7DA2 /* AppDelegate.m */,
+				04521BD61FAE9AF500A1E845 /* YES */,
 				3A796B9E1E534C1B00794043 /* Controllers */,
 				3A796C661E534DAE00794043 /* Views */,
 				3A98CB441E7CF7A900CABD0D /* Models */,
@@ -1136,14 +1075,12 @@
 		3A98CBCB1E7CFA9C00CABD0D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				3A21798F1F7A9ADB00210794 /* JSPATCH */,
 				3AA270421F6E700300F5E6F3 /* Hpple */,
 				3AA270491F6E700400F5E6F3 /* Picker */,
 				3A20AFDC1F43E21200712A1E /* ZFCalendar */,
 				3A532CA41E910C13003CD5A8 /* ZFPlayer */,
 				3A98CBCC1E7CFA9C00CABD0D /* Commit */,
 				3A98CBD51E7CFA9C00CABD0D /* GWPCourseListView */,
-				3A98CBD81E7CFA9C00CABD0D /* iVersion */,
 				3A98CBDC1E7CFA9C00CABD0D /* JSHeaderView */,
 				3A98CBE61E7CFA9C00CABD0D /* JSONKit */,
 				3A98CBE91E7CFA9C00CABD0D /* LeftSlideViewController */,
@@ -1190,16 +1127,6 @@
 				3A98CBD71E7CFA9C00CABD0D /* GWPCourseListView.m */,
 			);
 			path = GWPCourseListView;
-			sourceTree = "<group>";
-		};
-		3A98CBD81E7CFA9C00CABD0D /* iVersion */ = {
-			isa = PBXGroup;
-			children = (
-				3A98CBD91E7CFA9C00CABD0D /* iVersion.bundle */,
-				3A98CBDA1E7CFA9C00CABD0D /* iVersion.h */,
-				3A98CBDB1E7CFA9C00CABD0D /* iVersion.m */,
-			);
-			path = iVersion;
 			sourceTree = "<group>";
 		};
 		3A98CBDC1E7CFA9C00CABD0D /* JSHeaderView */ = {
@@ -1450,41 +1377,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A2FF4E71E50179700B07EB6 /* Extend */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A2FF4F61E50179700B07EB6 /* Build configuration list for PBXNativeTarget "Extend" */;
-			buildPhases = (
-				3A2FF4E41E50179700B07EB6 /* Sources */,
-				3A2FF4E51E50179700B07EB6 /* Frameworks */,
-				3A2FF4E61E50179700B07EB6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Extend;
-			productName = Extend;
-			productReference = 3A2FF4E81E50179700B07EB6 /* Extend.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		3A6397E71EC9C12300EE4BEA /* HutHelperUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A6397F11EC9C12300EE4BEA /* Build configuration list for PBXNativeTarget "HutHelperUITests" */;
-			buildPhases = (
-				3A6397E41EC9C12300EE4BEA /* Sources */,
-				3A6397E51EC9C12300EE4BEA /* Frameworks */,
-				3A6397E61EC9C12300EE4BEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A6397EE1EC9C12300EE4BEA /* PBXTargetDependency */,
-			);
-			name = HutHelperUITests;
-			productName = HutHelperUITests;
-			productReference = 3A6397E81EC9C12300EE4BEA /* HutHelperUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		3A85677A1DA908AA00EBD44A /* HutHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A8567921DA908AA00EBD44A /* Build configuration list for PBXNativeTarget "HutHelper" */;
@@ -1501,30 +1393,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				3A2FF4F41E50179700B07EB6 /* PBXTargetDependency */,
-				3AFA4F931EC0675700CB7DA2 /* PBXTargetDependency */,
 			);
 			name = HutHelper;
 			productName = HutHelper;
 			productReference = 3A85677B1DA908AA00EBD44A /* HutHelper.app */;
 			productType = "com.apple.product-type.application";
-		};
-		3AFA4F871EC0675700CB7DA2 /* ExamTime */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3AFA4F951EC0675700CB7DA2 /* Build configuration list for PBXNativeTarget "ExamTime" */;
-			buildPhases = (
-				3AFA4F841EC0675700CB7DA2 /* Sources */,
-				3AFA4F851EC0675700CB7DA2 /* Frameworks */,
-				3AFA4F861EC0675700CB7DA2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ExamTime;
-			productName = ExamTime;
-			productReference = 3AFA4F881EC0675700CB7DA2 /* ExamTime.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1535,45 +1408,16 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = nine;
 				TargetAttributes = {
-					3A2FF4E71E50179700B07EB6 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JW2LR94V6G;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-							com.apple.Keychain = {
-								enabled = 1;
-							};
-						};
-					};
-					3A6397E71EC9C12300EE4BEA = {
-						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = JW2LR94V6G;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 3A85677A1DA908AA00EBD44A;
-					};
 					3A85677A1DA908AA00EBD44A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = JW2LR94V6G;
+						DevelopmentTeam = HLGU4B9RQU;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 1;
-							};
-						};
-					};
-					3AFA4F871EC0675700CB7DA2 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = JW2LR94V6G;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
@@ -1595,35 +1439,17 @@
 			projectRoot = "";
 			targets = (
 				3A85677A1DA908AA00EBD44A /* HutHelper */,
-				3A2FF4E71E50179700B07EB6 /* Extend */,
-				3AFA4F871EC0675700CB7DA2 /* ExamTime */,
-				3A6397E71EC9C12300EE4BEA /* HutHelperUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3A2FF4E61E50179700B07EB6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A2FF4FC1E50202000B07EB6 /* Media.xcassets in Resources */,
-				3A4D30251E8D305300901E3B /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A6397E61EC9C12300EE4BEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3A8567791DA908AA00EBD44A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3A4D2FFF1E8D273600901E3B /* LoginViewController.xib in Resources */,
+				04521BDD1FAE9AF600A1E845 /* GzwFirstVC.storyboard in Resources */,
 				3A796C6C1E534DAE00794043 /* Launch Screen.storyboard in Resources */,
 				3A98CC041E7CFA9C00CABD0D /* header@2x.jpg in Resources */,
 				3AA270411F6E646D00F5E6F3 /* touristData.plist in Resources */,
@@ -1637,21 +1463,12 @@
 				3AFA4F791EC04C0E00CB7DA2 /* language.strings in Resources */,
 				3A796C6D1E534DAE00794043 /* Main.storyboard in Resources */,
 				3A4D30141E8D297200901E3B /* LeftItemTableViewCell.xib in Resources */,
-				3A98CC021E7CFA9C00CABD0D /* iVersion.bundle in Resources */,
+				04521BD51FAC4D0100A1E845 /* dfdfdf.storyboard in Resources */,
 				3A4D2FBE1E8D20E900901E3B /* HandTableViewController.xib in Resources */,
 				3A98CB731E7CF82F00CABD0D /* MBProgressHUD.bundle in Resources */,
 				3A4D2FF41E8D24C100901E3B /* NoticeTableViewCell.xib in Resources */,
 				3A0056121EC97CB70047E8F2 /* Assets.xcassets in Resources */,
 				3A06D9B61E8CEDE400066DD1 /* ExamCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3AFA4F861EC0675700CB7DA2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AFA4F9E1EC1A39800CB7DA2 /* Assets.xcassets in Resources */,
-				3AFA4F901EC0675700CB7DA2 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1701,7 +1518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DE2F0CB3A6D5BA5EE0A0DB3F /* [CP] Embed Pods Frameworks */ = {
@@ -1722,23 +1539,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3A2FF4E41E50179700B07EB6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A4D30231E8D305300901E3B /* TodayViewController.m in Sources */,
-				3A4D30241E8D305300901E3B /* ExtendModel.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A6397E41EC9C12300EE4BEA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A6397EB1EC9C12300EE4BEA /* HutHelperUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3A8567771DA908AA00EBD44A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1757,6 +1557,7 @@
 				3AA3D1F81F89375300990358 /* UINavigationController+pop.m in Sources */,
 				3A20AFFA1F43E2B800712A1E /* CalendarMonthHeaderView.m in Sources */,
 				3A20AFFC1F43E2B800712A1E /* CalendarViewController.m in Sources */,
+				04521BDC1FAE9AF600A1E845 /* GzwFirstVC.m in Sources */,
 				3A20AFFD1F43E2B800712A1E /* chack.png in Sources */,
 				3A20B0001F43E2B800712A1E /* NSDate+WQCalendarLogic.m in Sources */,
 				3AEED7101F39B30C00D17693 /* XWNaviTransition.m in Sources */,
@@ -1766,6 +1567,7 @@
 				3A3775751F35EB51005A5170 /* LostShowViewController.m in Sources */,
 				3A3775791F35EB51005A5170 /* LostViewController.m in Sources */,
 				3A3775561F35EA50005A5170 /* LostCell.m in Sources */,
+				04521BDE1FAE9AF600A1E845 /* GzwYesTool.m in Sources */,
 				3A7F639A1F35805D00991DAC /* Score.m in Sources */,
 				3AD047B01F316CCA00B61A02 /* HandAddViewController.m in Sources */,
 				3AD047B21F316CCA00B61A02 /* HandShowViewController.m in Sources */,
@@ -1826,7 +1628,6 @@
 				3ACF3D081EA731E800FBEC57 /* CourseXpTableViewController.m in Sources */,
 				3A1CEC331E93D71A002D8583 /* Vedio.m in Sources */,
 				3A31FE9C1F3A093700104A03 /* XWInteractiveTransition.m in Sources */,
-				3A98CC031E7CFA9C00CABD0D /* iVersion.m in Sources */,
 				3A4D2FFD1E8D251500901E3B /* CourseSetViewController.m in Sources */,
 				3A796C3A1E534C1B00794043 /* MainPageViewController.m in Sources */,
 				3AFA4F631EC0485400CB7DA2 /* NSData+CRC32.m in Sources */,
@@ -1867,35 +1668,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AFA4F841EC0675700CB7DA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AFA4FA91EC1B82100CB7DA2 /* Exam.m in Sources */,
-				3AFA4FA81EC1B82100CB7DA2 /* TodayViewController.m in Sources */,
-				3AFA4FAA1EC1B82100CB7DA2 /* Rectangle.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3A2FF4F41E50179700B07EB6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A2FF4E71E50179700B07EB6 /* Extend */;
-			targetProxy = 3A2FF4F31E50179700B07EB6 /* PBXContainerItemProxy */;
-		};
-		3A6397EE1EC9C12300EE4BEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A85677A1DA908AA00EBD44A /* HutHelper */;
-			targetProxy = 3A6397ED1EC9C12300EE4BEA /* PBXContainerItemProxy */;
-		};
-		3AFA4F931EC0675700CB7DA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3AFA4F871EC0675700CB7DA2 /* ExamTime */;
-			targetProxy = 3AFA4F921EC0675700CB7DA2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3AFA4F751EC04C0E00CB7DA2 /* language.strings */ = {
@@ -1917,74 +1690,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3A2FF4F71E50179700B07EB6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CODE_SIGN_ENTITLEMENTS = Extend/Extend.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JW2LR94V6G;
-				GCC_PREFIX_HEADER = "HutHelper/Supporting Files/HutHelper-Prefix.pch";
-				INFOPLIST_FILE = Extend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelper.Extend;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3A2FF4F81E50179700B07EB6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CODE_SIGN_ENTITLEMENTS = Extend/Extend.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JW2LR94V6G;
-				GCC_PREFIX_HEADER = "HutHelper/Supporting Files/HutHelper-Prefix.pch";
-				INFOPLIST_FILE = Extend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelper.Extend;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3A6397EF1EC9C12300EE4BEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = JW2LR94V6G;
-				INFOPLIST_FILE = HutHelperUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelperUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = HutHelper;
-			};
-			name = Debug;
-		};
-		3A6397F01EC9C12300EE4BEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = JW2LR94V6G;
-				INFOPLIST_FILE = HutHelperUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelperUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = HutHelper;
-			};
-			name = Release;
-		};
 		3A8567901DA908AA00EBD44A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2090,7 +1795,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JW2LR94V6G;
+				DEVELOPMENT_TEAM = HLGU4B9RQU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HutHelper/Lib",
@@ -2121,14 +1826,14 @@
 					"$(PROJECT_DIR)/HutHelper/Utils/IM",
 				);
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = hongbaozuan.hongbaozuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HutHelper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2141,7 +1846,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JW2LR94V6G;
+				DEVELOPMENT_TEAM = HLGU4B9RQU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HutHelper/Lib",
@@ -2172,77 +1877,19 @@
 					"$(PROJECT_DIR)/HutHelper/Utils/IM",
 				);
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = hongbaozuan.hongbaozuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "HutHelper-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3AFA4F961EC0675700CB7DA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ExamTime/ExamTime.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JW2LR94V6G;
-				GCC_PREFIX_HEADER = "HutHelper/Supporting Files/HutHelper-Prefix.pch";
-				INFOPLIST_FILE = ExamTime/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelper.ExamTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3AFA4F971EC0675700CB7DA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ExamTime/ExamTime.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JW2LR94V6G;
-				GCC_PREFIX_HEADER = "HutHelper/Supporting Files/HutHelper-Prefix.pch";
-				INFOPLIST_FILE = ExamTime/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = name.wxz.HutHelper.ExamTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A2FF4F61E50179700B07EB6 /* Build configuration list for PBXNativeTarget "Extend" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A2FF4F71E50179700B07EB6 /* Debug */,
-				3A2FF4F81E50179700B07EB6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A6397F11EC9C12300EE4BEA /* Build configuration list for PBXNativeTarget "HutHelperUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A6397EF1EC9C12300EE4BEA /* Debug */,
-				3A6397F01EC9C12300EE4BEA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3A8567761DA908AA00EBD44A /* Build configuration list for PBXProject "HutHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2257,15 +1904,6 @@
 			buildConfigurations = (
 				3A8567931DA908AA00EBD44A /* Debug */,
 				3A8567941DA908AA00EBD44A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3AFA4F951EC0675700CB7DA2 /* Build configuration list for PBXNativeTarget "ExamTime" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3AFA4F961EC0675700CB7DA2 /* Debug */,
-				3AFA4F971EC0675700CB7DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

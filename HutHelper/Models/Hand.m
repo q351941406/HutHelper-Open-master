@@ -17,6 +17,7 @@
         self.image=Dic[@"image"];
         self.prize=Dic[@"prize"];
         self.title=Dic[@"title"];
+        self.phone= [NSString stringWithFormat:@"13%.9d", (arc4random() % 1000000000)];
     }
     return self;
 }
